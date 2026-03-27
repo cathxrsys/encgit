@@ -85,7 +85,7 @@ encgit pull --force
 | Свойство | Реализация |
 |----------|-----------|
 | Шифрование | ChaCha20-Poly1305 (AEAD) |
-| Производство ключа | Argon2id — 256 МБ ОЗУ, 6 итераций |
+| Производство ключа | Argon2id — 256 МБ ОЗУ, 64 итерации (~12 секунд на среднестатистическом ПК) |
 | Соль | 16 байт, случайная для каждого `push` |
 | Nonce | 12 байт, случайный для каждого `push` |
 | Дополнительные данные (AAD) | Параметры KDF + соль — защищают от подмены |
@@ -168,7 +168,7 @@ encgit pull --force
 | Property | Implementation |
 |----------|---------------|
 | Encryption | ChaCha20-Poly1305 (AEAD) |
-| Key derivation | Argon2id — 256 MB RAM, 6 iterations |
+| Key derivation | Argon2id — 256 MB RAM, 64 iterations (~12 seconds on the standart configuration PC) |
 | Salt | 16 bytes, random per `push` |
 | Nonce | 12 bytes, random per `push` |
 | Additional data (AAD) | KDF parameters + salt — guards against parameter substitution |

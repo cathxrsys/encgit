@@ -14,7 +14,7 @@ impl Default for Argon2Config {
     fn default() -> Self {
         Self {
             mem_cost: 1024 * 256,
-            time_cost: 6,
+            time_cost: 64,
             lanes: 1,
         }
     }
